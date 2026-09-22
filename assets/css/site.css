@@ -21,6 +21,22 @@ a:focus-visible,button:focus-visible{outline:2px solid #e2d5ff;outline-offset:6p
 .site-header nav{display:flex;gap:34px;align-items:center}
 .site-header nav a{font-size:13px;color:#c2c5d0;transition:color .2s;padding:12px 0}
 .site-header nav a:hover,.site-header nav a[aria-current=page]{color:#fff}
+.projects-menu{position:relative}
+.projects-menu summary{display:flex;align-items:center;gap:7px;min-height:44px;padding:12px 0;list-style:none;cursor:pointer;font-size:13px;color:#c2c5d0;user-select:none}
+.projects-menu summary::-webkit-details-marker{display:none}
+.projects-menu summary:hover,.projects-menu[open] summary{color:#fff}
+.projects-menu summary:focus-visible{outline:2px solid #e2d5ff;outline-offset:6px;border-radius:2px}
+.menu-chevron{transition:transform .2s}
+.projects-menu[open] .menu-chevron{transform:rotate(180deg)}
+.projects-dropdown{position:absolute;top:calc(100% + 10px);right:-18px;width:304px;padding:9px;border:1px solid rgba(210,217,240,.2);border-radius:12px;background:#11151f;box-shadow:0 18px 60px rgba(0,0,0,.5);max-height:calc(100svh - 105px);overflow-y:auto}
+.projects-dropdown ul{list-style:none;margin:0;padding:0}
+.site-header nav .project-menu-link{display:flex;align-items:center;gap:13px;padding:11px 12px;border-radius:7px;color:#e0e2eb;transition:background-color .15s}
+.site-header nav .project-menu-link:hover,.site-header nav .project-menu-link:focus-visible,.site-header nav .project-menu-link[aria-current=page]{background:#202534;color:#fff}
+.project-menu-link img{flex:none;width:36px;height:36px}
+.project-menu-name{display:block;font-size:13px;line-height:1.5;font-weight:500}
+.project-menu-description{display:block;margin-top:2px;font-size:10px;line-height:1.5;color:var(--muted)}
+.project-menu-arrow{margin-left:auto;font-size:16px;color:#939bad}
+.site-header nav .all-projects-link{display:flex;justify-content:space-between;margin:8px 4px 0;padding:14px 9px 7px;border-top:1px solid var(--line);font-size:11px;color:#bfc4d5}
 .hero{min-height:680px;min-height:min(760px,88svh);position:relative;isolation:isolate;display:grid;align-items:center;text-align:center;padding:145px 24px 125px;overflow:hidden;background:#0a0d17}
 .hero:before{content:"";position:absolute;inset:0;z-index:-2;background:url('/images/cosmic-nebula.jpg') center 54%/cover no-repeat}
 .hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(7,9,16,.26),rgba(7,9,16,.08) 42%,rgba(9,12,18,.4) 75%,var(--bg)),linear-gradient(90deg,rgba(7,9,16,.18),transparent,rgba(7,9,16,.18))}
@@ -76,4 +92,6 @@ a:focus-visible,button:focus-visible{outline:2px solid #e2d5ff;outline-offset:6p
 @media(max-width:760px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.project-card,.project-card:nth-last-child(-n+2){grid-column:span 1}.project-card:last-child{grid-column:1/-1}.section-heading{align-items:flex-start;flex-direction:column;gap:13px}.section-heading>p{max-width:none}.hero{min-height:630px}.product-layout{grid-template-columns:1fr}.product-emblem{display:none}.page-main{padding-top:50px}.back-link{margin-bottom:35px}}
 @media(max-width:520px){.page-width{width:calc(100% - 40px)}.site-header{height:82px;padding-inline:20px}.brand{gap:8px}.brand img{width:32px;height:31px}.brand span{font-size:10px;letter-spacing:.1em}.site-header nav{gap:17px}.site-header nav a{font-size:11px}.hero{min-height:590px;padding:135px 20px 108px}.hero-content{padding-top:0}.hero h1{font-size:60px;letter-spacing:-.055em;margin-top:22px}.title-star{margin-left:7px;margin-top:8px}.hero .eyebrow{font-size:8px;letter-spacing:.18em}.tagline{font-size:20px;max-width:29ch;margin-inline:auto}.desktop-break{display:none}.hero-caption{left:20px;right:20px;bottom:37px;font-size:8px;letter-spacing:.12em}.hero-caption span:last-child{display:none}.explore-link{margin-top:28px}.projects{padding-top:18px;padding-bottom:54px}.section-heading{margin-bottom:26px}.section-heading h2{font-size:28px;max-width:16ch}.project-grid{grid-template-columns:1fr;gap:14px}.project-card{padding:25px;min-height:305px}.project-card:last-child{grid-column:auto}.card-top{margin-bottom:19px}.project-description{max-width:37ch}.site-footer{font-size:9px;gap:15px;padding-bottom:24px;align-items:center}.site-footer>a{white-space:nowrap}.page-main{padding-bottom:65px}.page-main h1{font-size:48px}.page-main .body-copy{font-size:15px}}
 @media(max-width:360px){.hero h1{font-size:48px}.brand span{font-size:9px}.site-header nav{gap:13px}}
+@media(max-width:520px){.projects-menu{position:static}.projects-menu summary{font-size:11px;gap:4px}.menu-chevron{width:10px;height:10px}.site-header nav{gap:13px}.projects-dropdown{top:70px;right:20px;width:min(304px,calc(100vw - 40px));max-height:calc(100svh - 90px)}}
+@media(max-width:360px){.site-header nav{gap:10px}.brand{gap:6px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}

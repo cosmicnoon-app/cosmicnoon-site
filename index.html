@@ -20,7 +20,23 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="brand" href="/" aria-label="Cosmic Noon home"><img src="/images/cosmic-noon-logo.svg" alt="" width="44" height="40"><span>Cosmic Noon</span></a>
-    <nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+    <nav aria-label="Main navigation">
+      <details class="projects-menu">
+        <summary>Projects <svg class="menu-chevron" viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="projects-dropdown">
+          <ul aria-label="Projects">
+            <li><a class="project-menu-link" href="https://www.blabble.ai"><img src="/images/project-blabble.svg" alt="" width="36" height="36"><span><span class="project-menu-name">Blabble</span><span class="project-menu-description">Information &amp; AI</span></span><span class="project-menu-arrow" aria-hidden="true">↗</span></a></li>
+            <li><a class="project-menu-link" href="https://www.gelato-maestro.com"><img src="/images/project-gelato-maestro.svg" alt="" width="36" height="36"><span><span class="project-menu-name">Gelato Maestro</span><span class="project-menu-description">Craft &amp; precision</span></span><span class="project-menu-arrow" aria-hidden="true">↗</span></a></li>
+            <li><a class="project-menu-link" href="https://www.inoon.app"><img src="/images/project-inoon.svg" alt="" width="36" height="36"><span><span class="project-menu-name">iNoon</span><span class="project-menu-description">Devices &amp; data</span></span><span class="project-menu-arrow" aria-hidden="true">↗</span></a></li>
+            <li><a class="project-menu-link" href="https://www.fish-oz.com"><img src="/images/project-fishoz.svg" alt="" width="36" height="36"><span><span class="project-menu-name">FishOz</span><span class="project-menu-description">Rules &amp; the water</span></span><span class="project-menu-arrow" aria-hidden="true">↗</span></a></li>
+            <li><a class="project-menu-link" href="/spacekeeper/"><img src="/images/project-spacekeeper.svg" alt="" width="36" height="36"><span><span class="project-menu-name">SpaceKeeper</span><span class="project-menu-description">Disk space for macOS</span></span><span class="project-menu-arrow" aria-hidden="true">→</span></a></li>
+          </ul>
+          <a class="all-projects-link" href="/#projects">View all projects <span aria-hidden="true">→</span></a>
+        </div>
+      </details>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+    </nav>
   </header>
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
