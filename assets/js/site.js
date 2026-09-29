@@ -12,17 +12,6 @@ document.querySelectorAll('.projects-menu').forEach((menu) => {
     if (!menu.contains(event.target)) menu.open = false;
   });
 
-  menu.addEventListener('focusout', (event) => {
-    if (!menu.contains(event.relatedTarget)) menu.open = false;
-  });
-
-  menu.addEventListener('click', (event) => {
-    if (event.target.closest('a')) {
-      menu.open = false;
-      trigger.focus({ preventScroll: true });
-    }
-  });
-
   menu.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && menu.open) {
       event.preventDefault();
