@@ -1,0 +1,14 @@
+Options -Indexes
+
+<IfModule mod_headers.c>
+    Header always set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header always set Pragma "no-cache"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set Referrer-Policy "no-referrer"
+    Header always set X-Robots-Tag "noindex, nofollow, noarchive"
+</IfModule>
+
+<FilesMatch "^(website-analytics|promo-codes|spacekeeper-downloads)\.php$">
+    Require all denied
+</FilesMatch>
